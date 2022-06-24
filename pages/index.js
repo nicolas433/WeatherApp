@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import { WiCloud } from "react-icons/wi";
+import { BiSearch } from "react-icons/bi";
 
 import styles from "../styles/Home.module.css";
 
@@ -35,7 +37,7 @@ export default function Home() {
             <h2 className={styles.locateTime}>06:09 - Monday, 9 Sep '19</h2>
           </div>
           <div className={styles.locateWeater}>
-            <div className={styles.locateWeatherSimbol}></div>
+            <WiCloud size={"90"} />
             <h2 className={styles.locateWeatherName}>Rain</h2>
           </div>
         </div>
@@ -46,7 +48,9 @@ export default function Home() {
                 placeholder="Another location"
                 className={styles.searchInput}
               ></input>
-              <button className={styles.searchButton}></button>
+              <button className={styles.searchButton}>
+                <BiSearch size={"30"} />
+              </button>
             </form>
           </div>
           <div className={styles.searchList}></div>
