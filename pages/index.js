@@ -25,17 +25,27 @@ export default function Home() {
     }
   };
 
-  const a = process.env.WEATHER_API_KEY;
-
   return (
     <div className={styles.container}>
       <div className={styles.appContainer}>
-        <div className={styles.landscapeSide}></div>
+        <div className={styles.landscapeSide}>
+          <h1 className={styles.locateTemperature}>16°</h1>
+          <div className={styles.locateInfos}>
+            <h2 className={styles.locateName}>London</h2>
+            <h2 className={styles.locateTime}>06:09 - Monday, 9 Sep '19</h2>
+          </div>
+          <div className={styles.locateWeater}>
+            <div className={styles.locateWeatherSimbol}></div>
+            <h2 className={styles.locateWeatherName}>Rain</h2>
+          </div>
+        </div>
         <div className={styles.searchSide}>
           <div className={styles.searchComponent}>
             <form>
-              {a}
-              <input className={styles.searchInput}></input>
+              <input
+                placeholder="Another location"
+                className={styles.searchInput}
+              ></input>
               <button className={styles.searchButton}></button>
             </form>
           </div>
